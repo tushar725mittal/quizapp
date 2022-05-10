@@ -15,6 +15,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class topic1quiz extends AppCompatActivity {
     String topic = "1";
+    String playerName;
     MediaPlayer wansa;
     MediaPlayer cansa;
     MediaPlayer clock;
@@ -588,6 +589,7 @@ public class topic1quiz extends AppCompatActivity {
             Intent intent = new Intent(topic1quiz.this,resultscreen.class);
             String Score = ""+score;
             intent.putExtra(Extra_Name,Score);
+            intent.putExtra(Extra_Name+"playerName",playerName);
             startActivity(intent);
             clock.stop();
             finish();
@@ -610,6 +612,7 @@ public class topic1quiz extends AppCompatActivity {
         clock.start();
         Intent intent_main = getIntent();
         topic = intent_main.getStringExtra(MainActivity.Extra_Topic);
+        playerName = intent_main.getStringExtra((MainActivity.Extra_Topic+"playerName"));
         assign_topic();
         question();
         new CountDownTimer(58000, 1000) {

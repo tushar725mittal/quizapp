@@ -122,18 +122,18 @@
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:layout_constraintVertical_bias="0.085" />
+        app:layout_constraintVertical_bias="0.37" />
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="371dp"
-        android:layout_height="221dp"
+        android:layout_width="372dp"
+        android:layout_height="143dp"
         android:layout_marginTop="32dp"
-        android:fontFamily="@font/cinzel_decorative"
+        android:fontFamily="cursive"
         android:text="@string/test_your_knowledge_by_taking_a_simple_quiz"
         android:textAlignment="viewStart"
         android:textColor="#3F51B5"
-        android:textSize="24sp"
+        android:textSize="22sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.484"
@@ -154,5 +154,45 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/playerName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:ems="10"
+        android:hint="Ex:  Rustic"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="162dp"
+        android:text="Enter Player Name"
+        app:layout_constraintBottom_toTopOf="@+id/playerName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView2"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/scoreboard"
+        android:layout_width="151dp"
+        android:layout_height="41dp"
+        android:onClick="scoreboard"
+        android:text="Scoreboard"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.962"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.164" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
